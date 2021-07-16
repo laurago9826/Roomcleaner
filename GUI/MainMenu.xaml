@@ -1,0 +1,58 @@
+﻿<Window x:Class="GUI.MainMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUI"
+        mc:Ignorable="d"
+        Title="GameWindow" Height="1080" Width="1920"
+        ResizeMode="NoResize"
+        WindowState="Maximized">
+    <Window.Background>
+        <ImageBrush ImageSource="Images/GUI/bckg9.png" Stretch="UniformToFill"/>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="943*"/>
+            <ColumnDefinition Width="971*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="340*"/>
+            <RowDefinition Height="183*"/>
+            <RowDefinition Height="183*"/>
+            <RowDefinition Height="183*"/>
+            <RowDefinition Height="263*"/>
+        </Grid.RowDefinitions>
+        <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black" Text="Roomcleaner" Grid.Column="1" Grid.Row="0"
+                    FontFamily="Berlin Sans FB" FontWeight="Bold" FontSize="80" Height="131" Width="560">
+            <TextBlock.RenderTransform>
+                <TranslateTransform X="3" Y="3" />
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Gold" Text="Roomcleaner" Grid.Column="1" Grid.Row="0"
+                   FontFamily="Berlin Sans FB" FontWeight="Bold" FontSize="80" Height="131" Width="560" Grid.ColumnSpan="1"/>
+        <Button Grid.Column="1" Grid.Row="1" Background="IndianRed" Opacity="0.4" Width="300" Margin="82 0 80 39"/>
+        <Button Grid.Column="1" Grid.Row="1" Background="Transparent" Foreground="Black" Content="Play" FontFamily="Berlin Sans FB" 
+                FontSize="51" BorderBrush="Black" BorderThickness="8" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                Margin="82 0 80 39" FontWeight="Bold" Width="300"/>
+        <Button Grid.Column="1" Grid.Row="1"  Background="Transparent" Foreground="Gold" Content="Play" FontFamily="Berlin Sans FB" 
+                FontSize="50" BorderBrush="Gold" BorderThickness="8" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                Margin="80 2 82 41" FontWeight="Bold" Width="300" Click="Button_Start" />
+
+        <Button Grid.Column="1" Grid.Row="2" Background="IndianRed" Opacity="0.4" Width="300" Margin="82 0 80 39"/>
+        <Button Grid.Column="1" Grid.Row="2"  Background="Transparent" Foreground="Black" Content="Scores" FontFamily="Berlin Sans FB" 
+                FontSize="51" BorderBrush="Black" BorderThickness="8" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                Margin="82 0 80 39" FontWeight="Bold" Width="300"/>
+        <Button Grid.Column="1" Grid.Row="2" Background="Transparent" Foreground="Gold" Content="Scores" FontFamily="Berlin Sans FB" 
+                FontSize="50" BorderBrush="Gold" BorderThickness="8" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                Margin="80 2 82 41" FontWeight="Bold" Width="300" Click="Button_Scores"/>
+
+        <Button Grid.Column="1" Grid.Row="3" Background="IndianRed" Opacity="0.4" Width="300" Margin="82 0 80 39"/>
+        <Button Grid.Column="1" Grid.Row="3"  Background="Transparent" Foreground="Black" Content="Exit" FontFamily="Berlin Sans FB" 
+                FontSize="51" BorderBrush="Black" BorderThickness="8" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                Margin="82 0 80 39" FontWeight="Bold" Width="300"/>
+        <Button Grid.Column="1" Grid.Row="3" Background="Transparent" Foreground="Gold" Content="Exit" FontFamily="Berlin Sans FB" 
+                FontSize="50" BorderBrush="Gold" BorderThickness="8" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                Margin="80 2 82 41" FontWeight="Bold" Width="300" Click="Button_Quit"/>
+    </Grid>
+</Window>

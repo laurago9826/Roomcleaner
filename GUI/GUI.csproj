@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{31BF0212-A8AD-4678-B066-8A545029CDEF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GUI</RootNamespace>
+    <AssemblyName>GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Helpers\Bindable.cs" />
+    <Compile Include="Helpers\CurrentPlayerToColourConverter.cs" />
+    <Compile Include="RegisterWindow.xaml.cs">
+      <DependentUpon>RegisterWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ScoresWindow.xaml.cs">
+      <DependentUpon>ScoresWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\ScoreViewModel.cs" />
+    <Page Include="GameWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GameArea.cs" />
+    <Compile Include="GameWindow.xaml.cs">
+      <DependentUpon>GameWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.xaml.cs">
+      <DependentUpon>MainMenu.xaml</DependentUpon>
+    </Compile>
+    <Page Include="RegisterWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ScoresWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="stylecop.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj">
+      <Project>{1eda9879-be49-4829-b585-dc3e8d584997}</Project>
+      <Name>BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repository\Repository.csproj">
+      <Project>{0951E1BC-2A89-449F-A524-E1C3DF0FC15D}</Project>
+      <Name>Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\mainCharacter\Down1.png" />
+    <Resource Include="Images\mainCharacter\Down2.png" />
+    <Resource Include="Images\mainCharacter\Left1.png" />
+    <Resource Include="Images\mainCharacter\Left2.png" />
+    <Resource Include="Images\mainCharacter\Right1.png" />
+    <Resource Include="Images\mainCharacter\Right2.png" />
+    <Resource Include="Images\mainCharacter\Up1.png" />
+    <Resource Include="Images\mainCharacter\Up2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\roommate_1\Down1.png" />
+    <Resource Include="Images\roommate_1\Down2.png" />
+    <Resource Include="Images\roommate_1\Left1.png" />
+    <Resource Include="Images\roommate_1\Left2.png" />
+    <Resource Include="Images\roommate_1\Right1.png" />
+    <Resource Include="Images\roommate_1\Right2.png" />
+    <Resource Include="Images\roommate_1\Up1.png" />
+    <Resource Include="Images\roommate_1\Up2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\roommate_2\Down1.png" />
+    <Resource Include="Images\roommate_2\Down2.png" />
+    <Resource Include="Images\roommate_2\Left1.png" />
+    <Resource Include="Images\roommate_2\Left2.png" />
+    <Resource Include="Images\roommate_2\Right1.png" />
+    <Resource Include="Images\roommate_2\Right2.png" />
+    <Resource Include="Images\roommate_2\Up1.png" />
+    <Resource Include="Images\roommate_2\Up2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\roommate_3\Down1.png" />
+    <Resource Include="Images\roommate_3\Down2.png" />
+    <Resource Include="Images\roommate_3\Left1.png" />
+    <Resource Include="Images\roommate_3\Left2.png" />
+    <Resource Include="Images\roommate_3\Right1.png" />
+    <Resource Include="Images\roommate_3\Right2.png" />
+    <Resource Include="Images\roommate_3\Up1.png" />
+    <Resource Include="Images\roommate_3\Up2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\furniture\Armchair.png" />
+    <Resource Include="Images\furniture\final_base1.png" />
+    <Resource Include="Images\furniture\SofaTable.png" />
+    <Resource Include="Images\furniture\Table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\mainCharacter\sgDown1.png" />
+    <Resource Include="Images\mainCharacter\sgDown2.png" />
+    <Resource Include="Images\mainCharacter\sgLeft1.png" />
+    <Resource Include="Images\mainCharacter\sgLeft2.png" />
+    <Resource Include="Images\mainCharacter\sgRight1.png" />
+    <Resource Include="Images\mainCharacter\sgRight2.png" />
+    <Resource Include="Images\mainCharacter\sgUp1.png" />
+    <Resource Include="Images\mainCharacter\sgUp2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\furniture\tt_burnedee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MenuItems\final_base1.png" />
+    <Resource Include="Images\MenuItems\scores.png" />
+    <Resource Include="Images\MenuItems\start.png" />
+    <Resource Include="Images\MenuItems\title.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\GUI\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\FoldingGame\Down.png" />
+    <Resource Include="Images\FoldingGame\DownGreen.png" />
+    <Resource Include="Images\FoldingGame\Left.png" />
+    <Resource Include="Images\FoldingGame\LeftGreen.png" />
+    <Resource Include="Images\FoldingGame\right.png" />
+    <Resource Include="Images\FoldingGame\RightGreen.png" />
+    <Resource Include="Images\FoldingGame\Up.png" />
+    <Resource Include="Images\FoldingGame\UpGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\FoldingGame\folded0.png" />
+    <Resource Include="Images\FoldingGame\folded1.png" />
+    <Resource Include="Images\FoldingGame\folded2.png" />
+    <Resource Include="Images\FoldingGame\folded3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\furniture\barr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\numbers\doubledott.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\numbers\0.png" />
+    <Resource Include="Images\numbers\1.png" />
+    <Resource Include="Images\numbers\2.png" />
+    <Resource Include="Images\numbers\3.png" />
+    <Resource Include="Images\numbers\4.png" />
+    <Resource Include="Images\numbers\5.png" />
+    <Resource Include="Images\numbers\6.png" />
+    <Resource Include="Images\numbers\7.png" />
+    <Resource Include="Images\numbers\8.png" />
+    <Resource Include="Images\numbers\9.png" />
+    <Resource Include="Images\numbers\doubledot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\numbers\doubledotttt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MenuItems\score.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\numbers\slash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\GUI\CONGRATULATIONS.png" />
+    <Resource Include="Images\GUI\GAMEOVER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\GUI\text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\GUI\bckg.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\GUI\bckg2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\GUI\bckg4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\GUI\bckg45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\GUI\bckg5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\GUI\bckg7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\GUI\bckg8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\GUI\bckg9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\StyleCop.Analyzers.1.1.118\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
+    <Analyzer Include="..\packages\StyleCop.Analyzers.1.1.118\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,9 @@
+var searchData=
+[
+  ['rectforview',['RectForView',['../class_business_logic_1_1_moving_object.html#a3794e21ab03f6134e771a0c06b2f42d4',1,'BusinessLogic.MovingObject.RectForView()'],['../class_business_logic_1_1_static_object.html#a5e983fdd684c8af6c4f514a54d8da54b',1,'BusinessLogic.StaticObject.RectForView()'],['../interface_business_logic_1_1_i_game_model.html#a44c60af0ec6658ae0e12afa73b78181f',1,'BusinessLogic.IGameModel.RectForView()']]],
+  ['remainingminutes',['RemainingMinutes',['../class_business_logic_1_1_game_logic.html#a851bb6d41094042db01816f064d9fbed',1,'BusinessLogic.GameLogic.RemainingMinutes()'],['../interface_business_logic_1_1_i_game_logic.html#a6da91c3e45d53de756703067b5c23757',1,'BusinessLogic.IGameLogic.RemainingMinutes()'],['../class_repository_1_1_score.html#a68bf0f601ae90a4247551b0f1987af52',1,'Repository.Score.RemainingMinutes()']]],
+  ['remainingseconds',['RemainingSeconds',['../class_business_logic_1_1_game_logic.html#a66a5c973af3a2aca89340bfade36bca6',1,'BusinessLogic.GameLogic.RemainingSeconds()'],['../interface_business_logic_1_1_i_game_logic.html#ac8dd05476da1bca89fb0d30fad00796a',1,'BusinessLogic.IGameLogic.RemainingSeconds()'],['../class_repository_1_1_score.html#a5c137a11e68565e767074aa351a96869',1,'Repository.Score.RemainingSeconds()']]],
+  ['remainingtime',['RemainingTime',['../class_repository_1_1_score.html#ad6d9c8ce7020e530124efdd94deca98d',1,'Repository::Score']]],
+  ['resourcemanager',['ResourceManager',['../class_g_u_i_1_1_properties_1_1_resources.html#ae81bdec4563f7ef8ce984e30958dd99f',1,'GUI.Properties.Resources.ResourceManager()'],['../class_repository_1_1_properties_1_1_resources.html#a16e38b2f9011f3b4029228e88fade682',1,'Repository.Properties.Resources.ResourceManager()']]],
+  ['roommateid',['RoommateID',['../class_business_logic_1_1_roommate.html#a42980126664b972bee626e8fcf7ab59b',1,'BusinessLogic::Roommate']]]
+];
